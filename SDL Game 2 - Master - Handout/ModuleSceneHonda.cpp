@@ -1,5 +1,8 @@
 #include "Globals.h"
 #include "ModuleSceneHonda.h"
+#include "ModuleSceneKen.h"
+#include "ModuleInput.h"
+#include "ModuleFadeToBlack.h"
 #include "Application.h"
 #include "ModuleTextures.h"
 #include "ModulePlayer.h"
@@ -60,7 +63,7 @@ bool ModuleSceneHonda::Start()
 
 	App->player->Enable();
 
-	//App->audio->PlayMusic("honda.ogg");
+	App->audio->PlayMusic("honda.ogg");
 
 	return true;
 }
@@ -86,7 +89,10 @@ update_status ModuleSceneHonda::Update()
 	App->renderer->Blit(graphics, 74, 144, &bath, 1.2f);
 	App->renderer->Blit(graphics, 74, 124, &bathTop, 1.2f);
 	App->renderer->Blit(graphics, 102, 136, &(bathFlow.GetCurrentFrame()), 1.2f);
-	
+
+	if (App->input->GetKey(SDL_SCANCODE_SPACE)) {
+		App->fade->FadeToBlack(App->scene_ken, this, 3.0f);
+	}
 
 	return UPDATE_CONTINUE;
 }

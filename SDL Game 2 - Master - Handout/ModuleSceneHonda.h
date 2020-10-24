@@ -10,7 +10,7 @@ struct SDL_Texture;
 class ModuleSceneHonda : public Module
 {
 public:
-	ModuleSceneHonda(bool start_enabled = true);
+	ModuleSceneHonda(bool start_enabled = false);
 	~ModuleSceneHonda();
 
 	bool Start();
