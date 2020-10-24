@@ -80,12 +80,12 @@ bool ModuleSceneHonda::CleanUp()
 update_status ModuleSceneHonda::Update()
 {
 	// Draw everything --------------------------------------
-	App->renderer->Blit(graphics, -200, 160, &ground);
-	App->renderer->Blit(graphics, -200, 0, &ceiling);
-	App->renderer->Blit(graphics, -25, 35, &background, 1.45f);
-	App->renderer->Blit(graphics, 74, 144, &bath, 1.0f);
-	App->renderer->Blit(graphics, 74, 124, &bathTop, 1.0f);
-	App->renderer->Blit(graphics, 102, 136, &(bathFlow.GetCurrentFrame()), 1.0f);
+	App->renderer->Blit(graphics, -200, 160, &ground, 1.3f);
+	App->renderer->Blit(graphics, -118, 0, &ceiling, 1.1f);
+	App->renderer->Blit(graphics, -16, 35, &background, 1.1f);
+	App->renderer->Blit(graphics, 74, 144, &bath, 1.2f);
+	App->renderer->Blit(graphics, 74, 124, &bathTop, 1.2f);
+	App->renderer->Blit(graphics, 102, 136, &(bathFlow.GetCurrentFrame()), 1.2f);
 	
 
 	return UPDATE_CONTINUE;
