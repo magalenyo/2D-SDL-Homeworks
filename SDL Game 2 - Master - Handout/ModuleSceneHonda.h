@@ -21,6 +21,7 @@ public:
 
 	SDL_Texture* graphics = nullptr;
 	SDL_Rect ground;
+	SDL_Rect ceiling;
 	SDL_Rect background;
 	SDL_Rect foreground;
 	SDL_Rect bath;
