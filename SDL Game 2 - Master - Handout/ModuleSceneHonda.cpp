@@ -82,7 +82,7 @@ update_status ModuleSceneHonda::Update()
 	// Draw everything --------------------------------------
 	App->renderer->Blit(graphics, -200, 160, &ground);
 	App->renderer->Blit(graphics, -200, 0, &ceiling);
-	App->renderer->Blit(graphics, -50, 35, &background, 1.45f);
+	App->renderer->Blit(graphics, -25, 35, &background, 1.45f);
 	App->renderer->Blit(graphics, 74, 144, &bath, 1.0f);
 	App->renderer->Blit(graphics, 74, 124, &bathTop, 1.0f);
 	App->renderer->Blit(graphics, 102, 136, &(bathFlow.GetCurrentFrame()), 1.0f);
